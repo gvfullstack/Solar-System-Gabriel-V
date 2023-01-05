@@ -6,6 +6,7 @@ import { data } from "../data/data";
 
 export function getPlanetsWithMassValue(data, number) {
   // Your code goes here...
+  return data.planets.filter((item)=>item.mass.massValue>=number).map((fItem)=>fItem.name)
 }
 
 

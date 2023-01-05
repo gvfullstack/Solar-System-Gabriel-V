@@ -6,6 +6,19 @@ import { data } from "../data/data";
 
 export function getAveragePlanetsTemperature(data) {
   // Your code goes here...
+  let moonsTotal = data.planets.reduce((accum, cur, index)=>{
+  	if(cur.avgTemp!==undefined){
+      return accum =(Number(cur.avgTemp) + Number(accum))
+    }
+ 		else{
+      return accum = Number(accum)
+        }
+
+}, 0)
+  		
+let moonsAverageTemp = moonsTotal/data.planets.length
+  
+return moonsAverageTemp
 }
 
 

@@ -6,6 +6,16 @@ import { data } from "../data/data";
 
 export function getAsteroidDataByName(data, asteroidName) {
   // Your code goes here...
+          
+let returnedAsteroid = data.asteroids.filter((asteroid)=>{
+    if(asteroid.name === asteroidName){
+      return asteroid
+    }
+    else{false}
+    })
+
+return returnedAsteroid[0]
+          
 }
 
 

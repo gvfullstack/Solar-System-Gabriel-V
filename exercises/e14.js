@@ -6,6 +6,16 @@ import { data } from "../data/data";
 
 export function getOrbitalPeriodsSum(data) {
   // Your code goes here...
+  let orbitalTotal = data.asteroids.reduce((accum, cur, index)=>{
+  	if(cur.orbitalPeriod!==undefined){
+      return accum =(Number(cur.orbitalPeriod) + Number(accum))
+    }
+ 		else{
+      return accum = Number(accum)
+        }
+
+}, 0)
+  	return orbitalTotal
 }
 
 

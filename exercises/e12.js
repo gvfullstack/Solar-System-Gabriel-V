@@ -6,6 +6,15 @@ import { data } from "../data/data";
 
 export function allPlanetsMoonsCount(data) {
   // Your code goes here...
+  let moonsTotal = data.planets.reduce((accum, cur)=>{
+  	if(cur.moonsCount!==undefined){
+      return accum =Number(cur.moonsCount) + Number(accum)}
+ 		else{
+      return accum = Number(accum)
+        }
+
+}, 0)
+  		return moonsTotal
 }
 
 
